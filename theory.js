@@ -300,3 +300,103 @@
 // app.listen(PORT, () => {
 //   console.log(`Server is listening on port ${PORT}`);
 // });
+
+// <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//     <title>Wanderlust</title>
+//   </head>
+//   <body>
+//     <h3>Edit your Listing</h3>
+//     <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+//       <input name="listing[title]" value="<%= listing.title %>" type="text" />
+//       <br /><br />
+//       <textarea name="listing[description]">
+// <%= listing.description %></textarea
+//       >
+//       <br /><br />
+//       <input name="listing[image]" value="<%= listing.image %>" type="text" />
+//       <br /><br />
+//       <input name="listing[price]" value="<%= listing.price %>" type="number" />
+//       <br /><br />
+//       <input
+//         name="listing[country]"
+//         value="<%= listing.country %>"
+//         type="text"
+//       />
+//       <br /><br />
+//       <input
+//         name="listing[location]"
+//         value="<%= listing.location %>"
+//         type="text"
+//       />
+//       <br /><br />
+//       <button>Edit</button>
+//     </form>
+//   </body>
+// </html>
+// <% layout("/layouts/boilerplate") %>
+// <body>
+//   <h3>Listing Details :</h3>
+//   <ul>
+//     <li><%= listing.title %></li>
+//     <li><%= listing.description %></li>
+//     <li>&#8377; <%= listing.price.toLocaleString("en-IN") %></li>
+//     <li><%= listing.location %></li>
+//     <li><%= listing.country %></li>
+//   </ul>
+//   <br />
+//   <a href="/listings/<%= listing._id %>/edit">Edit this Listing</a>
+//   <br /><br />
+//   <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
+//     <button>Delete this listing</button>
+//   </form>
+// </body>
+
+// <% layout("/layouts/boilerplate") %>
+// <div class="container">
+//   <div class="row">
+//     <div class="col-8 offset-2">
+//       <h3>Listing Details</h3>
+//     </div>
+
+//     <div class="card col-6 offset-2">
+//       <img
+//         src="<%= listing.image %>"
+//         class="card-img-top show-img"
+//         alt="listing-image"
+//       />
+//       <div class="card-body">
+//         <p class="card-text">
+//           <b><%= listing.title %></b> <br />
+//           <%= listing.description %> <br />
+//           <%= listing.price.toLocaleString("en-IN") %> <br />
+//           <%= listing.location %> <br />
+//           <%= listing.country %> <br />
+//         </p>
+//       </div>
+//     </div>
+
+//     <div class="row">
+//       <div class="col">
+//         <br />
+//         <a href="/listings/<%= listing._id %>/edit" class="btn btn-danger"
+//           >Edit
+//         </a>
+//       </div>
+//     </div>
+//     <div class="row">
+//       <div class="col">
+//         <br />
+//         <form
+//           method="POST"
+//           action="/listings/<%= listing._id %>?_method=DELETE"
+//         >
+//           <button class="btn btn-dark">Delete</button>
+//         </form>
+//       </div>
+//     </div>
+//   </div>
+// </div>
