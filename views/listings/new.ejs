@@ -4,7 +4,12 @@
     <br />
     <h3>Create a New Listing</h3>
 
-    <form method="POST" action="/listings" class="mb-3">
+    <form
+      method="POST"
+      action="/listings"
+      class="mb-3 needs-validation"
+      novalidate
+    >
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input
@@ -12,12 +17,19 @@
           placeholder="Add a Catchy Title"
           type="text"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">Title looks good!</div>
       </div>
 
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea name="listing[description]" class="form-control"></textarea>
+        <textarea
+          name="listing[description]"
+          class="form-control"
+          required
+        ></textarea>
+        <div class="invalid-feedback">Please enter a short description</div>
       </div>
 
       <div class="mb-3">
@@ -27,6 +39,7 @@
           placeholder="enter image URL/Link"
           type="text"
           class="form-control"
+          required
         />
       </div>
 
@@ -38,7 +51,9 @@
             placeholder="1200"
             type="number"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">Price should be valid</div>
         </div>
 
         <div class="mb-3 col-md-8">
@@ -48,7 +63,9 @@
             placeholder="India"
             type="text"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">Country should be valid</div>
         </div>
       </div>
 
@@ -59,7 +76,9 @@
           placeholder="Jaipur , Rajasthan"
           type="text"
           class="form-control"
+          required
         />
+        <div class="invalid-feedback">Country name should be valid</div>
       </div>
 
       <button class="btn btn-dark">Add</button>
@@ -68,3 +87,5 @@
     <br />
   </div>
 </div>
+
+<script src="/js/script.js"></script>
